@@ -57,7 +57,7 @@ class PrototypesController < ApplicationController
 
   def move_to_root_page
     unless user_signed_in?
-      redirect_to action: :index unless current_user == @prototype.user
+      redirect_to root_path unless current_user == @prototype.user
     end
   end
 end
